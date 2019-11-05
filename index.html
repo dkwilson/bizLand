@@ -20,7 +20,7 @@
     <title>BizLand</title>
   </head>
 
-  <body>
+  <body id="home" class="scrollspy">
     <!-- Nav Section -->
 
     <header class="main-header">
@@ -145,6 +145,137 @@
 
     <!-- Boxes Section End -->
 
+    <!-- About Section -->
+    <section id="about" class="section section-about grey lighten-3 center scrollspy">
+      <div class="container">
+        <h2>About BizLand</h2>
+        <p class="flow-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+          velit incidunt eligendi consequuntur quod assumenda nisi expedita
+          beatae consectetur explicabo.
+        </p>
+        <div class="row">
+          <div class="col s12 m6">
+            <img src="img/people.jpg" alt="" class="responsive-img circle" />
+          </div>
+          <div class="col s12 m5 offset-1">
+            <br />
+            <ul class="collection with-header z-depth-4">
+              <li class="collection-header">
+                <h5>Services</h5>
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Business Consultation
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Financial Analytics
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Security Services
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Marketing and Advertising
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Internet Services
+              </li>
+              <li class="collection-item">
+                <i class="material-icons left">check</i>Accounting
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- About Section End -->
+
+  <!-- Testimonials Section -->
+    <section id="testimonials" class="section section-testimonials blue white-text center scrollspy">
+      <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="row">
+          <div class="col s12 m4">
+          <div class="card grey lighten-4 black-text z-depth-4">
+            <div class="card-content">
+                <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem animi blanditiis inventore eligendi nulla ipsam doloremque nostrum, culpa doloribus rem necessitatibus, dignissimos tenetur, nisi tempora!</em></p>
+            </div>
+            <div class="card-action">
+                <p>John Doe FROM ABC, INC</p>
+              </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card grey lighten-4 black-text z-depth-4">
+            <div class="card-content">
+                <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem animi blanditiis inventore eligendi nulla ipsam doloremque nostrum, culpa doloribus rem necessitatibus, dignissimos tenetur, nisi tempora!</em></p>
+            </div>
+            <div class="card-action">
+              <p>Sharon Johnson FROM XYZ, INC</p>
+            </div>
+          </div>
+        </div>
+          <div class="col s12 m4">
+              <div class="card grey lighten-4 black-text z-depth-4">
+                <div class="card-content">
+                    <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem animi blanditiis inventore eligendi nulla ipsam doloremque nostrum, culpa doloribus rem necessitatibus, dignissimos tenetur, nisi tempora!</em></p>
+                </div>
+                <div class="card-action">
+                    <p>Bobby Jones FROM ACME, INC</p>
+                  </div>
+              </div> 
+            </div>
+      </div>
+
+    </section>
+
+  <!-- Testimonials Section End -->
+
+  <!-- Section: Contact -->
+
+
+   <!-- Section: Contact End -->
+
+
+   <!-- Footer Section -->
+   <footer class="page-footer blue-grey darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5>Location</h5>
+            <p>BizLand, INC</p>
+            <p>555 Somewhere Drive, Boston MA</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+                  <li>
+                    <a class="white-text" href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a class="white-text" href="#about">About</a>
+                  </li>
+                  <li>
+                    <a class="white-text" href="#testimonials">Testimonials</a>
+                  </li>
+                  <li>
+                    <a class="white-text" href="#contact">Contact</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright blue-grey darken-4">
+        <div class="container">
+        BizLand © 2019 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!"><i class="material-icons left">keyboard_arrow_up</i></a>
+        </div>
+      </div>
+    </footer>
+
+
+   <!-- Footer Section -->
+
     <!--Import jQuery before materialize.js-->
     <script
       type="text/javascript"
@@ -153,8 +284,11 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
       $(document).ready(function() {
-        //initiate side bar
+        //initside bar
         $(".button-collapse").sideNav();
+
+        //init Scrollspy
+        $('.scrollspy').scrollSpy();
 
         // Scrollfire
         const options = [
