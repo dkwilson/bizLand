@@ -76,31 +76,74 @@
             <a href="" class="btn blue">Download</a>
           </li>
         </ul>
-   <!-- Nav Section End -->
+        <!-- Nav Section End -->
 
-   <!-- Showcase Section -->
+        <!-- Showcase Section -->
         <div class="showcase container">
           <div class="row">
             <div class="col s12 main-text">
               <h5>You found the ...</h5>
               <h1>Right Place To Start</h1>
-              <p class="flow-text">To take your business to the next level with our services that have taken companies to the fortune 500. </p>
-              <br>
-              <a href="#about" class="btn btn-large white black-text">Learn More</a>
+              <p class="flow-text">
+                To take your business to the next level with our services that
+                have taken companies to the fortune 500.
+              </p>
+              <br />
+              <a href="#about" class="btn btn-large white black-text"
+                >Learn More</a
+              >
               <a href="#contact" class="white-text">
-                <i class="material-icons medium scroll-icon">arrow_drop_down_circle</i>
+                <i class="material-icons medium scroll-icon"
+                  >arrow_drop_down_circle</i
+                >
               </a>
             </div>
           </div>
         </div>
 
-
-   <!-- Showcase Section End -->
-
+        <!-- Showcase Section End -->
       </div>
     </header>
 
-    
+    <!-- Boxes Section -->
+    <section class="section-boxes center">
+      <div class="row">
+        <div class="col s12 m6 l3 blue white-text box">
+          <i class="material-icons medium">show_chart</i>
+          <h4>Grow Your Buisness</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            asperiores quasi rerum molestiae exercitationem autem.
+          </p>
+        </div>
+        <div class="col s12 m6 l3 purple white-text box">
+          <i class="material-icons medium">people</i>
+          <h4>Professional Advisors</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            asperiores quasi rerum molestiae exercitationem autem.
+          </p>
+        </div>
+        <div class="col s12 m6 l3 teal white-text box">
+          <i class="material-icons medium">verified_user</i>
+          <h4>Secure Your Company</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            asperiores quasi rerum molestiae exercitationem autem.
+          </p>
+        </div>
+        <div class="col s12 m6 l3 amber darken-4 white-text box">
+          <i class="material-icons medium">account_balance</i>
+          <h4>Multiply Your Income</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            asperiores quasi rerum molestiae exercitationem autem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes Section End -->
 
     <!--Import jQuery before materialize.js-->
     <script
@@ -110,10 +153,30 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
       $(document).ready(function() {
-        
         //initiate side bar
-        $('.button-collapse').sideNav();
+        $(".button-collapse").sideNav();
 
+        // Scrollfire
+        const options = [
+          {
+            selector: ".main-text",
+            offset: 0,
+            callback: function(el) {
+              Materialize.fadeInImage($(el));
+            }
+          },
+          {
+            selector: ".navbar-fixed",
+            offset: 1500,
+            callback: function() {
+              $("nav")
+                .removeClass("transparent")
+                .addClass("blue-grey darken-3");
+            }
+          }
+        ];
+
+        Materialize.scrollFire(options);
       });
     </script>
   </body>
